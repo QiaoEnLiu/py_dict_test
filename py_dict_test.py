@@ -56,7 +56,7 @@ R4X_Mapping={0:'Temp unit',
              }
 
 def R3X_address(searchName):
-    address=[key for key, value in R3X_Mapping.items() if value == searchName]
+    address= next((key for key, value in R3X_Mapping.items() if value == searchName), None)
     return address
 
 print(R3X_address('Read BAT'))
